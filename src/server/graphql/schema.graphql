@@ -1,0 +1,12 @@
+type List {
+  id: Int
+  name: String
+}
+
+type RootQuery {
+  viewer: Viewer
+}
+
+type Viewer {
+  list: [List]
+}

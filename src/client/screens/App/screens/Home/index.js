@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Relay from 'react-relay';
 
 class Home extends Component {
   render() {
@@ -9,5 +10,17 @@ class Home extends Component {
     );
   }
 }
+
+Home = Relay.createContainer(Home, {
+  fragments: {
+    viewer: () => Relay.QL`
+      fragment on Viewer {
+        list {
+         name
+        }
+      }
+    `
+  }
+});
 
 export default Home;
