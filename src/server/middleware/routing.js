@@ -11,7 +11,7 @@ export default function (req, res) {
     .then((reactStr) => {
       res.status(200).send(reactStr);
     }, (err = {}) => {
-      console.error(err);
+      console.error('router error', err);
 
       res.status(500).send(JSON.strigify(err, null, 4));
     });

@@ -6,6 +6,7 @@ class Home extends Component {
     return (
       <div className="home">
         <h1>This is a home container</h1>
+        {this.props.viewer.list.map(item => <h3>item.name</h3>)} 
       </div>
     );
   }

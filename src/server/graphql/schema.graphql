@@ -1,5 +1,4 @@
 type List {
-  id: Int
   name: String
 }
 

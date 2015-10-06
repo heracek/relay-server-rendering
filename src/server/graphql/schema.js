@@ -11,9 +11,6 @@ import {
 let listType = new GraphQLObjectType({
   name: 'List',
   fields: () => ({
-    id: {
-      type: GraphQLInt
-    },
     name: {
       type: GraphQLString
     }
@@ -32,11 +29,9 @@ let ViewerType = new GraphQLObjectType({
 let viewer = {
   list: [
     {
-      id: 1,
       name: 'First'
     },
     {
-      id: 2,
       name: 'Second'
     }
   ]
@@ -56,16 +51,16 @@ export const schema = new GraphQLSchema({
   })
 });
 
-// let query = `
-//  query Test {
-//    viewer {
-//      list {
-//        name
-//      }
-//    }
-//  }
-// `;
+let query = `
+ query Test {
+   viewer {
+     list {
+       name
+     }
+   }
+ }
+`;
 
-// graphql(schema, query).then(result => {
-//  console.log(JSON.stringify(result, null, 4));
-// });
+graphql(schema, query).then(result => {
+ console.log(JSON.stringify(result, null, 4));
+});
