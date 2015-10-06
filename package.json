@@ -1,0 +1,22 @@
+{
+  "name": "relay-isomorphic-issue",
+  "version": "0.1.0",
+  "description": "Relay server rendering issue",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "express": "^4.13.3",
+    "history": "^1.12.1",
+    "promise": "^7.0.4",
+    "react": "^0.14.0-rc1",
+    "react-dom": "^0.14.0-rc1",
+    "react-relay": "^0.3.2",
+    "react-router": "^1.0.0-rc1",
+    "react-router-relay": "^0.6.1"
+  }
+}
